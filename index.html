@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blake Logan - Aerospace Engineer</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/8e9fff24de.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var dropdown = document.querySelector(".dropdown");
+    var dropdownContent = document.querySelector(".dropdown-content");
+  
+    dropdown.addEventListener("click", function() {
+      dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+    });
+  
+    document.addEventListener("click", function(event) {
+      if (!dropdown.contains(event.target)) {
+        dropdownContent.style.display = "none";
+      }
+    });
+  });
+  </script>
+      
+</head>
+<body>
+    <section id="top">
+        <div id="name">Blake Logan</div>
+        <div id="aero">Aerospace Engineer (Astronautics)</div>
+        <a href="https://www.linkedin.com/in/blake-logan-196422268/"><img class="cl" id="linked" src="linkedin.JPG"></a>
+        <a href="index.html">
+            <div id="home" class="cl">Home</div>
+          </a>
+          <div id="projects" class="click dropdown">
+            Projects
+            <div class="dropdown-content" id="down">
+              <a href="ansys.html" class="drop" >ANSYS</a>
+              <a href="SOLIDWORKS.html" class="drop" >SOLIDWORKS</a>
+              <a href="MATLAB.html" class="drop" >MATLAB</a>
+              <a href="web.html" class="drop" >HTML/CSS/JavaScript</a>
+
+            </div>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSev70ERdfgZgOGpel4TxzGL-2jMivkQ2iMzqdlOKED8AMoXtA/viewform">
+              <div id="inquiries" class="cl">Inquiries</div>
+            </a>
+
+          
+          
+          
+      </section>
+      
+    <section id="bio">
+        <img id="pic" src="Selfpic.JPG">
+        <a id="resume"></a>
+        <div id="sum">Professional Summary</div>
+        <div id="email">Email: blakelogan.21@gmail.com </div>
+        <div id="phone">Phone: (816)-304-0011</div>
+        <a target="_blank" href="Resume.pdf"><div class="cl" id="resume">Resume</div></a>
+
+
+        <div id="p1">
+            Blake Logan is a highly motivated Aerospace Engineering undergraduate with a strong academic background and practical experience. With a focus in Astronautics, Blake consistently performs at the top of his class at Arizona State University while successfully balancing a part-time job. He possesses advanced skills in MATLAB/Simulink and proficiency in Python, HTML, CSS, JavaScript, ANSYS, and SOLIDWORKS. </div>
+        <div id="p2">
+            Currently, Blake is actively involved in the Sun Devil Satellite Laboratory, contributing to the development of a satellite design for the CanSat Competition organized by The American Astronautical Society. He has also completed notable projects such as the Prandtl-Glauert Computational Fluid Dynamics and Aerospike Wave Drag Analysis. With his technical expertise and ability to manage multiple responsibilities, Blake Logan is well-equipped to support innovative engineering solutions in the field of aerospace engineering.
+        </div>
+    </section>
+
+    <section id="education">
+      <img id="fult" src="fulton.JPG">
+      <img id="fult4" src="fulton.JPG">
+
+      <div id="edu">Education</div>
+      <li id="degree">Currently pursuing degree in Aerospace Engineering (Astronautics) (BSE) at 	
+        Ira A. Fulton Schools of Engineering </li>
+      <li id="grad">Graduating in Spring 2024</li>
+      <li id="gpa">3.86 GPA</li>
+
+      <div id="courses">Relevant Courses</div>
+      <li id="c1">AEE 362 High-Speed Aerodynamics - A</li>
+      <li id="c2">AEE 462 Space Vehicle Dynamics/Control - A+</li>
+      <li id="c3">MAE 318 System Dynamics and Control I - A+</li>
+      <li id="c4">AEE 360 Aerodynamics - A-</li>
+      <li id="c5">EEE 350 Random Signal Analysis - A</li>
+    </section>
+
+    <section id="extra">
+      <div id="extracurriculars">Extracurriculars</div>
+      <img id="sdsl" src="sdsl.jpg">
+      <li id="sdsl1">Current member of the Sun Devil Satellite Laboratory</li>
+      <li id="sdsl2">Participating in the Mach CanSat Project (Summer 2023) - Aerospace Subsystem</li>
+      <li id="sdsl3">Participating in the CanSat Competition (Fall 2023 - Spring 2024) - Aerospace Subsystem</li>
+      <img id="target" src="target.jpg">
+      <li id="tar1">Currently working part time at Target to fund education</li>
+      <li id="tar2">Position title: Guest Advocate</li>
+      <li id="tar3">25 - 30 hours per week</li>
+      <div id="web">Freelance Web development</div>
+      <li id="web1">Develops websites for small businesses (Navigate to "Inquiries" to reach out) </li>
+      <li id="web2">Refer to HTML/CSS/Javascript Projects page for freelance projects</li>
+    </section>
+
+    <section id="bottom">
+
+
+    </section>
+
+    <script>
+      // Function to check if an element is in the viewport
+      function isElementInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    
+      // Function to handle scroll event
+      function handleScroll() {
+        var pic = document.getElementById("pic");
+        var target = document.getElementById("target");
+        var sdsl = document.getElementById("sdsl");
+
+        if (isElementInViewport(pic)) {
+          pic.classList.add("animated");
+        } else {
+          pic.classList.remove("animated");
+        }
+        if (isElementInViewport(target)) {
+          target.classList.add("animated");
+        } else {
+          target.classList.remove("animated");
+        }
+        if (isElementInViewport(sdsl)) {
+          sdsl.classList.add("animated");
+        } else {
+          sdsl.classList.remove("animated");
+        }
+
+        
+
+      }
+    
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+    </script>
+
+</body>
+</html>
